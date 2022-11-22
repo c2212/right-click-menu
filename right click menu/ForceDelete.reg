@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+;create a copy of cmd.exe and rename it as you like cmdAdmin or cmdA and change the name in .reg(cmdA.exe /c..)
+;and go to it property menu then capability select run as administrator
+;if your builtin administrator user don't need to create copy of cmd(cmdA)
+;if you dont like to create cmdA then rename "..shell\Take Ownership" to "..shell\runas" and "cmdA.exe /c.." to "cmd.exe /c.." in .reg
+
+[HKEY_CLASSES_ROOT\*\shell\ForceDelete]
+@="ForceDelete"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\*\shell\ForceDelete\command]
+@="cmdA.exe /c takeown /f \"%1\" /a && icacls \"%1\" /grant administrators:(F) /q && del /f /q /a:- \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ForceDelete]
+@="ForceDelete"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ForceDelete\command]
+@="cmdA.exe /c takeown /f \"%1\" /r /a /d y && icacls \"%1\" /grant administrators:(F) /t /q && rmdir \"%1\" /s /q"
