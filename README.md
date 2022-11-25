@@ -6,6 +6,7 @@ Take Ownership https://youtu.be/HjNpZdGPePQ
 ForceDelete https://youtu.be/AyFdIDcCbdw
 
 ![cmds](https://user-images.githubusercontent.com/88878677/203421689-40e5f76b-3b42-4ddc-974c-a1f20c1056a8.png)
+![cmdAc](https://user-images.githubusercontent.com/88878677/204002974-978e0a0b-aace-47d8-a284-d83e33d24888.png)
 
 ![Take Ownership](https://user-images.githubusercontent.com/88878677/203417386-e19d4066-1e0e-4993-ba47-7d9d8802e73e.jpg)
 ![ForceDelete](https://user-images.githubusercontent.com/88878677/203417395-b2232883-5911-4a49-98e2-b67384306e4c.jpg)
