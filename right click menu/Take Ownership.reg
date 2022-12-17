@@ -11,7 +11,7 @@ Windows Registry Editor Version 5.00
 "NoWorkingDirectory"=""
 
 [HKEY_CLASSES_ROOT\*\shell\Take Ownership\command]
-@="cmdA.exe /c takeown /f \"%1\" /a && icacls \"%1\" /grant administrators:(F) /q"
+@="cmdA.exe /q /c takeown /f \"%1\" /a && icacls \"%1\" /grant administrators:(F) /q"
 
 [HKEY_CLASSES_ROOT\Directory\shell\Take Ownership]
 @="Take Ownership"
@@ -19,4 +19,4 @@ Windows Registry Editor Version 5.00
 "NoWorkingDirectory"=""
 
 [HKEY_CLASSES_ROOT\Directory\shell\Take Ownership\command]
-@="cmdA.exe /c takeown /f \"%1\" /r /a /d y && icacls \"%1\" /grant administrators:(F) /t /q"
+@="cmdA.exe /q /c takeown /f \"%1\" /r /a /d y && icacls \"%1\" /grant administrators:(F) /t /q"
