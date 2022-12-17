@@ -11,7 +11,7 @@ Windows Registry Editor Version 5.00
 "NoWorkingDirectory"=""
 
 [HKEY_CLASSES_ROOT\*\shell\ForceDelete\command]
-@="cmdA.exe /c takeown /f \"%1\" /a && icacls \"%1\" /grant administrators:(F) /q && del /f /q /a:- \"%1\""
+@="cmdA.exe /q /c takeown /f \"%1\" /a && icacls \"%1\" /grant administrators:(F) /q && del /f /q /a:- \"%1\""
 
 [HKEY_CLASSES_ROOT\Directory\shell\ForceDelete]
 @="ForceDelete"
@@ -19,4 +19,4 @@ Windows Registry Editor Version 5.00
 "NoWorkingDirectory"=""
 
 [HKEY_CLASSES_ROOT\Directory\shell\ForceDelete\command]
-@="cmdA.exe /c takeown /f \"%1\" /r /a /d y && icacls \"%1\" /grant administrators:(F) /t /q && rmdir \"%1\" /s /q"
+@="cmdA.exe /q /c takeown /f \"%1\" /r /a /d y && icacls \"%1\" /grant administrators:(F) /t /q && rmdir \"%1\" /s /q"
